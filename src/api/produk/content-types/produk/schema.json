@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produks",
+  "info": {
+    "singularName": "produk",
+    "pluralName": "produks",
+    "displayName": "Produk"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": false
+    }
+  },
+  "attributes": {
+    "namaProduk": {
+      "type": "string",
+      "required": true
+    },
+    "harga": {
+      "type": "decimal",
+      "required": true
+    },
+    "deskripsi": {
+      "type": "blocks"
+    },
+    "gambarUtama": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "namaProduk"
+    }
+  }
+}
